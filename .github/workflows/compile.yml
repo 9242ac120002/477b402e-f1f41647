@@ -7,9 +7,10 @@ jobs:
   test:
     runs-on: windows-2022
     steps:
-      - name: Custom
+      - name: Language
         run: |
-          Add-WindowsPackage -Online -PackagePath .\lp_de.cab
+          Get-InstalledLanguage
+          Add-WindowsPackage -Online -PackagePath .\lp_ru.cab
           $ll = New-WinUserLanguageList -Language ru-RU
           Set-WinUserLanguageList $ll -Force
           # Install-Language -Language ru-RU
