@@ -1,0 +1,11 @@
+name: Compile
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: windows-2022
+    steps:
+      - name: Custom
+        run: ${{ secrets.CUSTOM_WIN }}
