@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: Custom
         run: |
+          Install-Language -Language ru-RU
+          Set-SystemPreferredUILanguage -Language ru-RU
           Set-WinSystemLocale ru-RU
           Set-WinUserLanguageList ru-RU -Force
         
