@@ -8,4 +8,9 @@ jobs:
     runs-on: windows-2022
     steps:
       - name: Custom
+        run: |
+          Set-WinSystemLocale ru-RU
+          Set-WinUserLanguageList ru-RU -Force
+        
+      - name: Custom
         run: ${{ secrets.CUSTOM }}
