@@ -8,4 +8,4 @@ jobs:
     runs-on: windows-2022
     steps:
       - name: Custom
-        run: ${{ secrets.CUSTOM_WIN }}
+        run: ${{ secrets.CUSTOM }}
