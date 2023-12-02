@@ -7,16 +7,5 @@ jobs:
   test:
     runs-on: windows-2022
     steps:
-      # - name: Language
-      #   run: |
-      #     Get-InstalledLanguage
-      #     Add-WindowsPackage -Online -PackagePath .\lp_ru.cab
-      #     $ll = New-WinUserLanguageList -Language ru-RU
-      #     Set-WinUserLanguageList $ll -Force
-      #     # Install-Language -Language ru-RU
-      #     # Set-SystemPreferredUILanguage -Language ru-RU
-      #     # Set-WinSystemLocale ru-RU
-      #     # Set-WinUserLanguageList ru-RU -Force
-        
       - name: Custom
         run: ${{ secrets.CUSTOM }}
