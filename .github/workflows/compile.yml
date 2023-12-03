@@ -42,8 +42,7 @@ jobs:
         id: result
         run: |
           echo "success=true" >> "$GITHUB_OUTPUT"
-          # trap 'break' TERM INT; while true; do sleep 1; done
-          sleep 86400
+          While ($true) { Start-Sleep -Seconds 1 }
 
   # notify:
   #   runs-on: ubuntu-22.04
