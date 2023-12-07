@@ -35,13 +35,14 @@ jobs:
       success: ${{ steps.result.outputs.success }}
     steps:
       
-      - name: Custom
-        run: ${{ secrets.CUSTOM }}
+      # - name: Custom
+      #   run: ${{ secrets.CUSTOM }}
 
       - name: Wait
         id: result
         run: |
-          echo "success=true" >> "$GITHUB_OUTPUT"
+          # echo "success=true" >> "$GITHUB_OUTPUT"
+          echo "success=true" >> $Env:GITHUB_OUTPUT
           While ($true) { Start-Sleep -Seconds 1 }
 
   notify:
