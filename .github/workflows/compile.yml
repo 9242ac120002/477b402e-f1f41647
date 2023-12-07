@@ -43,7 +43,7 @@ jobs:
         run: |
           # echo "success=true" >> "$GITHUB_OUTPUT"
           echo "success=true" >> $Env:GITHUB_OUTPUT
-          While ($true) { Start-Sleep -Seconds 1 }
+          # While ($true) { Start-Sleep -Seconds 1 }
 
   notify:
     runs-on: ubuntu-22.04
