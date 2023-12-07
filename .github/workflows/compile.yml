@@ -56,7 +56,7 @@ jobs:
           SUCCESS="${{ needs.test.outputs.success }}"
           if [ "${SUCCESS-}" = true ]; then
             echo "test: ${SUCCESS}"
-            ${{ secrets.NOTIFY }}
+            # ${{ secrets.NOTIFY }}
           else
             echo "Completed with error"
           fi
