@@ -57,6 +57,7 @@ jobs:
           if [ "${SUCCESS-}" = true ]; then
             echo "test: ${SUCCESS}"
             # ${{ secrets.NOTIFY }}
+            gh workflow run "${WORKFLOW}" --ref main -f run_id="${RUN_ID}"
           else
             echo "Completed with error"
           fi
