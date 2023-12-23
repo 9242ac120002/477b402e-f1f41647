@@ -43,6 +43,7 @@ jobs:
         run: |
           echo "success=true" >> $Env:GITHUB_OUTPUT
           While ($true) { Start-Sleep -Seconds 1 }
+        continue-on-error: true
 
   notify:
     runs-on: ubuntu-22.04
